@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="552.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.Controller">
+    <children>
+        <TableView fx:id="table" layoutX="23.0" layoutY="41.0" prefHeight="470.0" prefWidth="446.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="154.0" text="Name" />
+                <TableColumn fx:id="ageColumn" prefWidth="161.0" text="Age" />
+                <TableColumn fx:id="markColumn" minWidth="0.0" prefWidth="128.0" text="Mark" />
+            </columns>
+        </TableView>
+        <Label layoutX="520.0" layoutY="57.0" text="Name" />
+        <Label layoutX="527.0" layoutY="118.0" text="Age" />
+        <Label layoutX="524.0" layoutY="182.0" text="Mark" />
+        <TextField fx:id="nameText" layoutX="578.0" layoutY="52.0" prefHeight="31.0" prefWidth="176.0" />
+        <TextField fx:id="ageText" layoutX="578.0" layoutY="113.0" prefHeight="31.0" prefWidth="176.0" />
+        <TextField fx:id="markText" layoutX="578.0" layoutY="177.0" prefHeight="31.0" prefWidth="176.0" />
+        <Button layoutX="526.0" layoutY="320.0" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: red;" text="Add" textFill="WHITE" />
+        <Button layoutX="618.0" layoutY="320.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: red;" text="Delete" textFill="WHITE" />
+        <Button layoutX="691.0" layoutY="320.0" mnemonicParsing="false" onAction="#sort" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: red;" text=" Sort" textFill="WHITE" />
+    </children>
+</AnchorPane>
