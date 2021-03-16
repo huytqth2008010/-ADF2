@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumnBase;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -69,6 +70,16 @@ public class Controller implements Initializable {
         studentList.remove(selected);
     }
     public void sort(){
-
+        Collections.sort(studentList, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                if (o1.getMark() < o2.getMark()) {
+                    return o2.compareTo(o1);
+                } else {
+                   Collections.sort(studentList);
+                   return o1.compareTo(o2);
+                }
+            }
+        });
     }
 }
