@@ -1,4 +1,4 @@
-package demo;
+package Asm.s1;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -69,17 +69,15 @@ public class Controller implements Initializable {
         Student selected = table.getSelectionModel().getSelectedItem();
         studentList.remove(selected);
     }
+
+    private boolean change = false;
     public void sort(){
-        Collections.sort(studentList, new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                if (o1.getMark() < o2.getMark()) {
-                    return o2.compareTo(o1);
-                } else {
-                   Collections.sort(studentList);
-                   return o1.compareTo(o2);
-                }
-            }
-        });
+        if (change){
+            Collections.reverse(studentList);
+            change = false;
+        }else {
+            Collections.sort(studentList);
+            change = true;
+        }
     }
 }
