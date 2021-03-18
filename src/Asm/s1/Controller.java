@@ -63,6 +63,7 @@ public class Controller implements Initializable {
         newStudent.setAge(Integer.parseInt(ageText.getText()));
         newStudent.setMark(Integer.parseInt(markText.getText()));
         studentList.add(newStudent);
+
     }
 
     public void delete (ActionEvent e){
@@ -81,3 +82,5 @@ public class Controller implements Initializable {
         }
     }
 }
+
+

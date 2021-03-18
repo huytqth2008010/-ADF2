@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Asm.s2.Controller">
+    <children>
+        <TableView fx:id="txtRs" layoutX="12.0" layoutY="72.0" prefHeight="470.0" prefWidth="507.0">
+            <columns>
+                <TableColumn fx:id="tenSV" prefWidth="179.0" text="Name" />
+                <TableColumn fx:id="tuoiSV" prefWidth="110.0" text="Age" />
+                <TableColumn fx:id="diemSV" minWidth="0.0" prefWidth="106.0" text="Mark" />
+                <TableColumn fx:id="updateSV" prefWidth="111.0" text="Edit" />
+            </columns>
+        </TableView>
+        <Label layoutX="539.0" layoutY="77.0" text="Name" />
+        <Label layoutX="539.0" layoutY="133.0" text="Age" />
+        <Label layoutX="536.0" layoutY="202.0" text="Mark" />
+        <TextField fx:id="txtName" layoutX="595.0" layoutY="72.0" prefHeight="31.0" prefWidth="176.0" />
+        <TextField fx:id="txtAge" layoutX="595.0" layoutY="133.0" prefHeight="31.0" prefWidth="176.0" />
+        <TextField fx:id="txtMark" layoutX="595.0" layoutY="197.0" prefHeight="31.0" prefWidth="176.0" />
+        <Button layoutX="529.0" layoutY="340.0" mnemonicParsing="false" onAction="#input" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: red;" text="Add" textFill="WHITE" />
+      <Text fx:id="txtValidate" fill="RED" layoutX="517.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="237.6708984375" />
+      <Label layoutX="253.0" layoutY="14.0" prefHeight="43.0" prefWidth="279.0" text="Danh sách sinh viên">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <Button layoutX="617.0" layoutY="340.0" mnemonicParsing="false" onAction="#btnSort" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: red;" text="Sort" textFill="WHITE" />
+      <Button layoutX="706.0" layoutY="340.0" mnemonicParsing="false" onAction="#btnEdit" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: red;" text="Update" textFill="WHITE" />
+    </children>
+</AnchorPane>
