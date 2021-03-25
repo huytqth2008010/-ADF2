@@ -1,20 +1,15 @@
-package Asm.s2;
-
-import java.awt.*;
+package Asm.s3.model;
 
 public class Student {
-    String name;
-    Integer age;
-    Integer mark;
+    public String name;
+    public int age;
+    public int mark;
 
-
-    public Student(String name, Integer age, Integer mark) {
+    public Student(String name, int age, int mark) {
         this.name = name;
         this.age = age;
         this.mark = mark;
-
     }
-
 
     public String getName() {
         return name;
@@ -24,20 +19,19 @@ public class Student {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public Integer getMark() {
+    public int getMark() {
         return mark;
     }
 
-    public void setMark(Integer mark) {
+    public void setMark(int mark) {
         this.mark = mark;
     }
-
 }

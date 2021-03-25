@@ -1,14 +1,23 @@
 package Asm.s2;
 
+import demo.s4.Account;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.KeyCode;
 import javafx.scene.text.Text;
+import javafx.util.Callback;
 import javafx.util.converter.IntegerStringConverter;
+
+import javax.swing.*;
+import java.awt.event.MouseEvent;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.ResourceBundle;
@@ -23,12 +32,15 @@ public class Controller implements Initializable {
     public TableColumn<Student,Integer> tuoiSV;
     public TableColumn<Student,Integer> diemSV;
     public TableColumn<Student,Button> updateSV;
-
+    public static Integer identity = 0;
+    public static Student editSinhVien;
     ObservableList<Student> ds = FXCollections.observableArrayList();
 
     static boolean sortType = false;
 
-
+    int index = -1;
+    PreparedStatement pst = null;
+    Connection conn = null;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tenSV.setCellValueFactory(new PropertyValueFactory<Student,String>("name"));
@@ -98,7 +110,37 @@ public class Controller implements Initializable {
         });
         txtRs.setEditable(true);
     }
-    public void btnEdit(){
 
+
+    //////// methode select users ///////
+
+    public void getSelected(){
+        index = txtRs.getSelectionModel().getSelectedIndex();
+        if (index <= 1 ){
+            return;
+        }
+        txtName.setText(tenSV.getCellData(index).toString());
+        txtAge.setText(String.valueOf(tuoiSV.getCellData(index)));
+        txtMark.setText(String.valueOf(diemSV.getCellData(index)));
     }
+    public void btnEdit(){
+        try {
+
+            String name =  txtName.getText();
+            int age = Integer.parseInt(txtAge.getText());
+            int mark = Integer.parseInt(txtMark.getText());
+            Student s = new Student(name,age,mark);
+
+            ds.remove(index);
+            txtRs.setEditable(ds.add(s));
+            tenSV.setCellValueFactory(new PropertyValueFactory<Student,String>("name"));
+            tuoiSV.setCellValueFactory(new PropertyValueFactory<Student,Integer>("age"));
+            diemSV.setCellValueFactory(new PropertyValueFactory<Student,Integer>("mark"));
+            txtRs.setItems(ds);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+
 }
