@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="managestudent.danhsach.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tbview" layoutX="32.0" layoutY="71.0" prefHeight="309.0" prefWidth="536.0">
+        <columns>
+          <TableColumn fx:id="txtName" prefWidth="255.0" text="TenSV" />
+          <TableColumn fx:id="txtAge" minWidth="0.0" prefWidth="158.0" text="Tuoi" />
+            <TableColumn fx:id="txtMark" prefWidth="122.0" text="Diem" />
+        </columns>
+      </TableView>
+      <Button onAction="#home" layoutX="32.0" layoutY="14.0" mnemonicParsing="false" text="Home" />
+   </children>
+</Pane>

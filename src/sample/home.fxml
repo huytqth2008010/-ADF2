@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+
+<Pane fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button onAction="#screenDS" layoutX="225.0" layoutY="107.0" mnemonicParsing="false" text="Danh sach sinh vien" />
+      <Button onAction="#addSV" layoutX="226.0" layoutY="225.0" mnemonicParsing="false" text="Them moi sinh vien" />
+   </children>
+</Pane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.s3.StartTimer">
+   <children>
+      <Label layoutX="133.0" layoutY="23.0" text="Đồng hồ bấm giờ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="178.0" layoutY="190.0" mnemonicParsing="false" onAction="#startTimer" style="-fx-background-color: red;" text="Start" textFill="WHITE" />
+      <Text layoutX="193.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtMin" layoutX="71.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtSec" layoutX="225.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

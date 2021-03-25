@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Asm.s3.editSV.Controller">
+   <children>
+      <Button onAction="#update" layoutX="253.0" layoutY="301.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: red;" text="Update" textFill="WHITE" />
+      <Button layoutX="105.0" layoutY="301.0" mnemonicParsing="false" onAction="#home" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: red;" text="Black" textFill="WHITE" />
+      <Text layoutX="114.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mark :" />
+      <Text layoutX="112.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="112.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtName" layoutX="189.0" layoutY="233.0" prefHeight="31.0" prefWidth="305.0" promptText="Mark . . ." />
+      <TextField fx:id="txtAge" layoutX="189.0" layoutY="175.0" prefHeight="31.0" prefWidth="305.0" promptText="Age . . ." />
+      <TextField fx:id="txtMark" layoutX="189.0" layoutY="111.0" prefHeight="31.0" prefWidth="305.0" promptText="Name . . ." />
+      <Text fx:id="txtValidate" fill="RED" layoutX="109.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label layoutX="168.0" layoutY="34.0" text="Sửa thông tin sinh viên">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="392.0" layoutY="301.0" mnemonicParsing="false" onAction="#studentList" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: red;" text="Student_list" textFill="WHITE" />
+   </children>
+</Pane>

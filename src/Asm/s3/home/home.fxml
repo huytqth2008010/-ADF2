@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="Asm.s3.home.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="116.0" layoutY="25.0" text="Màn hình chính điều hướng">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button onAction="#screenDS" layoutX="198.0" layoutY="116.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Danh sách sinh viên" textFill="#fcfcfc">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button onAction="#screenAdd" layoutX="220.0" layoutY="209.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Thêm sinh viên" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button onAction="#screenEdit" layoutX="185.0" layoutY="296.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Sửa thông tin sinh viên" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

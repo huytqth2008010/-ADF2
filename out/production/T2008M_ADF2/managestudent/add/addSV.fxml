@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="managestudent.add.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName" layoutX="207.0" layoutY="104.0" promptText="Ten" />
+      <TextField fx:id="txtAge" layoutX="207.0" layoutY="161.0" promptText="Tuoi" />
+      <TextField fx:id="txtMark" layoutX="207.0" layoutY="226.0" promptText="diem" />
+      <Button onAction="#input" layoutX="326.0" layoutY="305.0" mnemonicParsing="false" text="Submit" />
+      <Button onAction="#home" layoutX="207.0" layoutY="305.0" mnemonicParsing="false" text="Home" />
+   </children>
+</Pane>

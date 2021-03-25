@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="managestudent.home.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button onAction="#danhsach" layoutX="225.0" layoutY="98.0" mnemonicParsing="false" text="Danh sach sinh vien" />
+      <Button onAction="#themSV" layoutX="235.0" layoutY="185.0" mnemonicParsing="false" text="Them sinh vien" />
+   </children>
+</Pane>
